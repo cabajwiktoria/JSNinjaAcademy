@@ -1,7 +1,7 @@
 // zmienne 
 const firstName = 'Wiktoria';
 const lastName = 'Cabaj';
-const job = 'QA';
+const job = 'Tester';
 const birthYear = 1994;
 const year = 2021
 
