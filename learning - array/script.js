@@ -132,7 +132,7 @@
 // ZADANKO 1
 // funkcja która liczy średnia arytmetyczna dodatnich elementów
 
-/*const list1a = [1, 2, 3, 4, 5];
+const list1a = [1, 2, 3, 4, 5];
 const list1b = [3, 8, -8, 10, 5];
 
 function positiveAverage(arr) {
@@ -149,15 +149,30 @@ function positiveAverage(arr) {
   //   console.log(positive, summary);
   //   console.log(summary / positive.length);
 }
-
 positiveAverage(list1a);
 positiveAverage(list1b);
-*/
+
+function positiveAverage2(arr) {
+  let summary = 0;
+  let numbers = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      summary = summary + arr[i];
+      numbers = numbers + 1;
+    }
+  }
+  const average = summary / numbers;
+  console.log(average);
+  //   console.log(positive, summary);
+  //   console.log(summary / positive.length);
+}
+positiveAverage2(list1a);
+positiveAverage2(list1b);
 
 // ZADANKO 2
-// znalesc najwieszą liczme i jego index
+// znalesc najwieszą liczbe i jego index
 
-/*const list2a = [5, 2, 6, 4, 2, 7, 3, 4, 7, 9, 1, 2, 5, 5, 4, 3];
+const list2a = [5, 2, 6, 4, 2, 7, 3, 4, 7, 9, 1, 2, 5, 5, 4, 3];
 const list2b = [100, 102, 99];
 
 function biggestIndex(arr) {
@@ -173,15 +188,52 @@ function biggestIndex(arr) {
 
 biggestIndex(list2a);
 biggestIndex(list2b);
-*/
+
+function biggestIndex2(arr) {
+  let biggest = 0;
+  let index = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > biggest) {
+      biggest = arr[i];
+      index = [i];
+    }
+  }
+  console.log(biggest, index);
+}
+
+biggestIndex2(list2a);
+biggestIndex2(list2b);
 
 // ZADANKO 3
 // transfer listy o jakąś liczbę
 
-/*
-const list3a = [[1, 2, 3, 4, 5]];
+const list3a = [1, 2, 3, 4, 5];
+const number3a = 2;
+
 const list3b = [1, 2, 3, 4, 5];
- */
+const number3b = -2;
+
+const list3c = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const number3c = 4;
+
+function transfer(arr, number) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    let newIndex = i + number;
+    if (newIndex < 0) {
+      newIndex = newIndex + arr.length;
+    }
+    if (newIndex >= arr.length) {
+      newIndex = newIndex - arr.length;
+    }
+    newArray[newIndex] = arr[i];
+  }
+  console.log(newArray);
+}
+
+transfer(list3a, number3a);
+transfer(list3b, number3b);
+transfer(list3c, number3c);
 
 // ZADANKO 4
 // zwrocic liste niepowtarzanych elementów

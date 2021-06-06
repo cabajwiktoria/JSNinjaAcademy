@@ -78,4 +78,3 @@ let calculatorResult = function () {
     document.getElementById('calculatorInput').value = result;
 }
 
-let 
