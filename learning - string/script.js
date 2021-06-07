@@ -48,6 +48,18 @@ function stringWithoutNumbers3(string) {
 
 stringWithoutNumbers3(string1);
 
+function stringWithoutNumbers4(string) {
+  let newString = "";
+  for (let i = 0; i < string.length; i++) {
+    if (isNaN(string[i])) {
+      newString += string[i];
+    }
+  }
+  console.log(`Exercise 1 result 4: ${newString}`);
+}
+
+stringWithoutNumbers4(string1);
+
 // Zadanie 2 - Usunąc spacje z stringa.
 
 let string2 = "sadfsa fsdafasdf sadfsadf sadfasdf sadfsafd";
@@ -56,8 +68,9 @@ function stringWithoutSpaces1(string) {
   let array = string.split(" ");
   //   console.log(array);
   let newString = array.join("");
-  console.log(`Exercise 2 result: ${newString}`);
+  console.log(`Exercise 2 result 1: ${newString}`);
 }
+stringWithoutSpaces1(string2);
 
 function stringWithoutSpaces2(string) {
   let array = [];
@@ -67,11 +80,21 @@ function stringWithoutSpaces2(string) {
     }
   }
   let newString = array.join("");
-  console.log(`Exercise 2 result: ${newString}`);
+  console.log(`Exercise 2 result 2: ${newString}`);
+}
+stringWithoutSpaces2(string2);
+
+function stringWithoutSpaces3(string) {
+  let newString = "";
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] !== " ") {
+      newString += string[i];
+    }
+  }
+  console.log(`Exercise 2 result 3: ${newString}`);
 }
 
-stringWithoutSpaces1(string2);
-stringWithoutSpaces2(string2);
+stringWithoutSpaces3(string2);
 
 // Zadanie 3 - Oczyscic string od powtórzen przyklad "abcddejfksdfjksdufwi" zwraca "abcdejfksuwi"
 
@@ -87,8 +110,9 @@ function stringWithoutRepeating1(string) {
     }
   //   console.log(newArray);
   let newString = newArray.join("");
-  console.log(`Exercise 3 result: ${newString}`);
+  console.log(`Exercise 3 result 1: ${newString}`);
 }
+stringWithoutRepeating1(string3);
 
 function stringWithoutRepeating2(string) {
   let newString = "";
@@ -102,8 +126,7 @@ function stringWithoutRepeating2(string) {
       newString = newString + character;
     }
   }
-  console.log(`Exercise 3 result: ${newString}`);
+  console.log(`Exercise 3 result 2: ${newString}`);
 }
 
-stringWithoutRepeating1(string3);
 stringWithoutRepeating2(string3);
